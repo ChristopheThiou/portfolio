@@ -323,6 +323,11 @@ footer {
   padding: 10px 0;
 }
 
+.error,
+.success {
+  display: none;
+}
+
 footer p {
   color: #071346;
   font-size: 1.2em;

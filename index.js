@@ -91,3 +91,29 @@ function topFunction() {
       behavior: 'smooth'
     });
   }
+
+  document.querySelector('form').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "contact.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.error) {
+                document.querySelector(".error").textContent = response.error;
+                document.querySelector(".error").style.display = "block";
+                document.querySelector(".success").style.display = "none";
+            } else {
+                document.querySelector(".success").textContent = response.success;
+                document.querySelector(".success").style.display = "block";
+                document.querySelector(".error").style.display = "none";
+            }
+        }
+    }
+
+    xhr.send(new URLSearchParams(new FormData(event.target)).toString());
+});
+

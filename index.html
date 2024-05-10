@@ -85,7 +85,8 @@
             <div id="contact" class="contact">
                 <h2>Contactez-moi</h2>
                 <p>N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</p>
-                <form class="form">
+                <form class="form" action="contact.php" method="POST">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                     <div class="input-group">
                         <div class="input-field">
                             <label for="name">Nom *</label>
@@ -123,6 +124,8 @@
                         <p class="mention" id="counter"></p>
                     </div>
                     <input type="submit" value="Envoyer">
+                    <p class="error"></p>
+                    <p class="success"></p>
                 </form>
             </div>
             <button id="back-to-top" title="Back to top"><i class="far fa-arrow-alt-circle-up"></i></button>
