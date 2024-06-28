@@ -2,12 +2,12 @@ document.querySelector('.burger-menu').addEventListener('click', function() {
     var navLinks = document.querySelector('.burger-links');
     navLinks.classList.toggle('open');
   
-    var content = document.querySelector('.container'); // Replace '.content' with the selector for the elements you want to move
+    var content = document.querySelector('.container');
     if (navLinks.classList.contains('open')) {
-      // If the menu is open, move the content down
-      content.style.marginTop = '50px'; // Replace '200px' with the height of your menu
+
+      content.style.marginTop = '50px';
     } else {
-      // If the menu is closed, move the content back up
+      
       content.style.marginTop = '0';
     }
   });
@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        // Add the 'active' class to the clicked link
+
         this.classList.add('active');
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({

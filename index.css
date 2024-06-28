@@ -36,8 +36,8 @@ body {
 .navbar {
   position: relative;
   display: flex;
-  justify-content: space-between; /* Change this from space-around to space-between */
-  align-items: center; /* Add this to align the logo and the links vertically */
+  justify-content: space-between;
+  align-items: center;
   background: linear-gradient(120deg, #2c3e50 0%, #4a69bd 50%, #82ccdd 100%);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   padding: 10px 0;
@@ -48,31 +48,31 @@ body {
 }
 
 .logo {
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  margin-left: 20px; /* Adjust as needed */
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
   border-radius: 50%;
 }
 
 .nav-item {
-  color: #071346; /* Change this to one of the colors in your background gradient */
+  color: #071346;
   text-decoration: none;
   font-size: 1.2em;
 }
 
 .nav-item:hover {
-  color: #2c3e50; /* Change this to one of the colors in your background gradient */
+  color: #2c3e50;
 }
 
 a.nav-item.active {
-  color: #2c3e50; /* Change this to the color you want for active links */
+  color: #2c3e50;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 50%; /* Adjust as needed */
-  margin-right: 20px; /* Adjust as needed */
+  width: 50%;
+  margin-right: 20px;
 }
 
 .burger-menu {
@@ -296,25 +296,24 @@ p {
 }
 
 #back-to-top {
-  /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: -100px; /* Change this from 20px to -100px */
-  right: 10px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #4a69bd; /* Dark blue background */
-  color: white; /* White text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  position: fixed;
+  bottom: -100px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #4a69bd;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: bottom 0.5s; /* Add this line */
+  transition: bottom 0.5s;
 }
 
 #back-to-top:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
 }
 
 footer {
