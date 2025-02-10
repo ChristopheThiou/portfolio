@@ -117,3 +117,9 @@ function topFunction() {
     xhr.send(new URLSearchParams(new FormData(event.target)).toString());
 });
 
+window.addEventListener("load", function() {
+    const currentYear = new Date().getFullYear();
+    const footerText = document.querySelector("footer p");
+    footerText.textContent = "© " + currentYear + " - Christophe THIOU. Tous droits réservés.";
+  });
+
